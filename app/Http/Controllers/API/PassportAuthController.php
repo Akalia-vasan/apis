@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
  
 use App\Models\User;
  
-class AuthController extends Controller
+class PassportAuthController extends Controller
 {
     /**
      * Registration Req

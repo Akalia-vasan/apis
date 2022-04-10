@@ -20,7 +20,7 @@ use App\Http\Controllers\API\PassportAuthController;
 Route::post('register', [PassportAuthController::class, 'register'])->name('register');
 Route::post('login', [PassportAuthController::class, 'login'])->name('login');
 
-Route::group( ['middleware' => [] ],function(){
+Route::group( ['middleware' => ['auth:api'] ],function(){
     Route::post('/get', [ItemController::class, 'index']);
     Route::post('/create', [ItemController::class, 'store']);
     Route::post('/edit/{id}', [ItemController::class, 'update']);

@@ -17,6 +17,7 @@ class CreateItemsTable extends Migration
             $table->id();
             $table->string('title');
             $table->text('body');
+            $table->unsignedBigInteger('user_id');
             $table->date('due_date');
             $table->mediumText('attachment');
             $table->string('reminder');
